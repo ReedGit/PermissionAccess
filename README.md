@@ -14,7 +14,7 @@ In your `build.gradle`:
 ## Usage
 
 ```
-    PermissionAccess.getInstance().requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE,         Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
+    PermissionAccess.getInstance().requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
                         .setRationale("测试")
                         .setCallback(new PermissionAccess.PermissionCallback() {
                             @Override
@@ -23,7 +23,6 @@ In your `build.gradle`:
                                     Log.i("未通过的权限", permissions.get(i));
                                 }
                             }
-
                             @Override
                             public void onPermissionSuccess() {
                                 Log.i("权限结果", "通过");
