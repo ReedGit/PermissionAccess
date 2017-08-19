@@ -5,29 +5,29 @@ An Android library to request permissions.
 
 In your `build.gradle`:
 
-```
-    dependencies {
-         compile 'me.reed.permissionaccess:permissionaccess:1.0.0'
-    }
+```groovy
+dependencies {
+    compile 'me.reed.permissionaccess:permissionaccess:1.0.0'
+}
 ```
 
 ## Usage
 
-```
-    PermissionAccess.getInstance().requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
-                        .setRationale("测试")
-                        .setCallback(new PermissionAccess.PermissionCallback() {
-                            @Override
-                            public void onPermissionError(List<String> permissions) {
-                                for (int i = 0; i < permissions.size(); i++) {
-                                    Log.i("未通过的权限", permissions.get(i));
-                                }
+```java
+PermissionAccess.getInstance().requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
+                    .setRationale("测试")
+                    .setCallback(new PermissionAccess.PermissionCallback() {
+                        @Override
+                        public void onPermissionError(List<String> permissions) {
+                            for (int i = 0; i < permissions.size(); i++) {
+                                Log.i("未通过的权限", permissions.get(i));
                             }
-                            @Override
-                            public void onPermissionSuccess() {
-                                Log.i("权限结果", "通过");
-                            }
-                        }).start(MainActivity.this);
+                        }
+                        @Override
+                        public void onPermissionSuccess() {
+                            Log.i("权限结果", "通过");
+                        }
+                    }).start(MainActivity.this);
 ```
 
 License
