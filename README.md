@@ -1,5 +1,5 @@
 # PermissionAccess
-An Android library to request permissions.
+An Android library to request for permissions.
 
 ## Getting started
 
