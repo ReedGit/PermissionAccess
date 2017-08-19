@@ -13,6 +13,7 @@ dependencies {
 
 ## Usage
 
+
 ```
 PermissionAccess.getInstance().requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
                         .setRationale("测试")
