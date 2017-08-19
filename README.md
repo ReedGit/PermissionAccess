@@ -7,7 +7,7 @@ In your `build.gradle`:
 
 ```
     dependencies {
-        compile 'me.reed.permissionaccess:permissionaccess:1.0.0'
+         compile 'me.reed.permissionaccess:permissionaccess:1.0.0'
     }
 ```
 
