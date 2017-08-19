@@ -5,16 +5,16 @@ An Android library to request permissions.
 
 In your `build.gradle`:
 
-```groovy
-dependencies {
-    compile 'me.reed.permissionaccess:permissionaccess:1.0.0'
-}
+```
+    dependencies {
+        compile 'me.reed.permissionaccess:permissionaccess:1.0.0'
+    }
 ```
 
 ## Usage
 
-```groovy
-PermissionAccess.getInstance().requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
+```
+    PermissionAccess.getInstance().requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE,         Manifest.permission.CAMERA, Manifest.permission.ACCESS_FINE_LOCATION)
                         .setRationale("测试")
                         .setCallback(new PermissionAccess.PermissionCallback() {
                             @Override
