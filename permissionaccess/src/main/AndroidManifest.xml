@@ -23,8 +23,10 @@
         android:supportsRtl="true">
 
         <activity
-            android:name="me.reed.permissionaccess.EmptyActivity"
-            android:theme="@style/ThemeTransparent"/>
+            android:name="me.reed.permissionaccess.PermissionEmptyActivity"
+            android:theme="@style/PermissionThemeTransparent"
+            android:launchMode="singleTop"
+            android:exported="false"/>
 
     </application>
 

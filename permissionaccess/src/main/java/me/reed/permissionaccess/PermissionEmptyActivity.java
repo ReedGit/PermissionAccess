@@ -31,7 +31,7 @@ import java.util.List;
  * @author reed on 2017/7/16
  */
 @TargetApi(23)
-class EmptyActivity extends Activity {
+public class PermissionEmptyActivity extends Activity {
 
     private static final int PERMISSION_REQUEST_CODE = 100;
 
@@ -52,6 +52,13 @@ class EmptyActivity extends Activity {
         }
         final String[] permissions = new String[needPermissions.size()];
         needPermissions.toArray(permissions);
+        if (permissions.length <= 0) {
+            if (PermissionAccess.instance.callback != null) {
+                PermissionAccess.instance.callback.onPermissionSuccess();
+            }
+            finish();
+            return;
+        }
         if (!isShowRequest) {
             requestPermissions(permissions, PERMISSION_REQUEST_CODE);
         } else {

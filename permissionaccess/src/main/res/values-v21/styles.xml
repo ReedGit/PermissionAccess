@@ -16,7 +16,7 @@
   -->
 
 <resources>
-    <style name="ThemeTransparent">
+    <style name="PermissionThemeTransparent">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorPrimaryDark">@android:color/transparent</item>

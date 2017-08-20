@@ -69,7 +69,7 @@ public class PermissionAccess {
                 }
                 return;
             }
-            Intent intent = new Intent(activity, EmptyActivity.class);
+            Intent intent = new Intent(activity, PermissionEmptyActivity.class);
             activity.startActivity(intent);
         } else {
             if (callback != null) {
